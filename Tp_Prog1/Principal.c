@@ -20,7 +20,7 @@ int main()
     // Validación de legajo
     if (legajo < 1000 || legajo > 9999)
     {
-        printf("ERROR: Legajo fuera de rango debe ser (entre 1000 y 9999).\n");
+        printf("Legajo fuera de rango debe ser (entre 1000 y 9999)\n");
         hayError = true;
     }
     else
@@ -51,7 +51,7 @@ int main()
                 montoFinal = arancel * 1.05;
                 break;
             default:
-                printf("ERROR: Modalidad invalida.\n");
+                printf("Modalidad invalida.\n");
                 hayError = true;
                 break;
             }
@@ -64,7 +64,7 @@ int main()
             break;
 
         default:
-            printf("ERROR: Turno invalido.\n");
+            printf("Turno invalido.\n");
             hayError = true;
             break;
         }
