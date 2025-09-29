@@ -40,6 +40,7 @@ int main()
                 printf("2 - Tarde\n");
                 printf("3 - Noche\n");
                 scanf("%d", &turno);
+
             } while (turno < 1 || turno > 3);
 
             switch (turno)
@@ -52,7 +53,8 @@ int main()
                     printf("Seleccione la modalidad: \n");
                     printf("1 - Presencial\n");
                     printf("2 - Virtual\n");
-                    scanf("%d", &modalidad);
+                    scanf("%d", &modalidad); // en este bloque o cerca se podria corregir al ingresar un char
+
                 } while (modalidad < 1 || modalidad > 2);
 
                 switch (modalidad)
@@ -64,7 +66,7 @@ int main()
                     montoFinal = arancel * 1.05;
                     break;
                 default:
-                    printf("Modalidad invalida.\n");
+                    printf("Modalidad invalida...\n");
                     hayError = true;
                     break;
                 }
