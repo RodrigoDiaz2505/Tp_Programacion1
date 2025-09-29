@@ -97,5 +97,5 @@ int main()
     }
 
     return 0;
-    // falta correjir validaciones
+    // este esta completo en teoria , tal vez falte corregir alguna cosa
 }

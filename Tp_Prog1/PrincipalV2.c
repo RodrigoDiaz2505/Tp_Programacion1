@@ -132,6 +132,11 @@ int main()
 
     } while (deseaContinuar == true);
 
+    if (deseaContinuar == false)
+    {
+        printf("Hasta Pronto...");
+    }
+
     return 0;
-    // falta correjir validaciones
+    //"Do's" implementados para mejorar las validaciones de menus switchs
 }
