@@ -127,4 +127,5 @@ int main()
     } while (deseaContinuar == true);
 
     return 0;
+    // falta correjir validaciones
 }
