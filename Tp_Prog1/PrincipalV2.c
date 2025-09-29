@@ -33,21 +33,27 @@ int main()
         else
         {
             // Solicitar turno
-            printf("Seleccione su turno: \n");
-            printf("1 - Maniana\n");
-            printf("2 - Tarde\n");
-            printf("3 - Noche\n");
-            scanf("%d", &turno);
+            do // este do soluciona la validacion (Ya no termina y se pierde la entrada anterior en caso de error)
+            {
+                printf("Seleccione su turno: \n");
+                printf("1 - Maniana\n");
+                printf("2 - Tarde\n");
+                printf("3 - Noche\n");
+                scanf("%d", &turno);
+            } while (turno < 1 || turno > 3);
 
             switch (turno)
             {
             case 1: // Mañana
             case 2: // Tarde
                 // modalidad
-                printf("Seleccione la modalidad: \n");
-                printf("1 - Presencial\n");
-                printf("2 - Virtual\n");
-                scanf("%d", &modalidad);
+                do
+                {
+                    printf("Seleccione la modalidad: \n");
+                    printf("1 - Presencial\n");
+                    printf("2 - Virtual\n");
+                    scanf("%d", &modalidad);
+                } while (modalidad < 1 || modalidad > 2);
 
                 switch (modalidad)
                 {
@@ -58,7 +64,7 @@ int main()
                     montoFinal = arancel * 1.05;
                     break;
                 default:
-                    printf("ERROR: Modalidad invalida.\n");
+                    printf("Modalidad invalida.\n");
                     hayError = true;
                     break;
                 }
