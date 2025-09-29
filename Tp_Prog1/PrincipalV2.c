@@ -21,7 +21,7 @@ int main()
         printf("Bienvenido al sistema de inscripciones de alumnos\n");
 
         // Solicitar legajo
-        printf("Ingrese su numero de legajo: ");
+        printf("Ingrese su numero de legajo: \n");
         scanf("%d", &legajo);
 
         // Validacion de legajo
