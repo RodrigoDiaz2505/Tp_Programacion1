@@ -134,7 +134,7 @@ int main()
 
     if (deseaContinuar == false)
     {
-        printf("Hasta Pronto...");
+        printf("Hasta Pronto..."); // Mensaje de salida implementado
     }
 
     return 0;

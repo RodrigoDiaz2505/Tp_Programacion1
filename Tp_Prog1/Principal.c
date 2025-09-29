@@ -14,10 +14,10 @@ int main()
     printf("Bienvenido al sistema de inscripciones de alumnos\n");
 
     // Solicitar legajo
-    printf("Ingrese su numero de legajo: ");
+    printf("Ingrese su numero de legajo: \n");
     scanf("%d", &legajo);
 
-    // Validación de legajo
+    // Validacion de legajo
     if (legajo < 1000 || legajo > 9999)
     {
         printf("Legajo fuera de rango debe ser (entre 1000 y 9999)\n");
