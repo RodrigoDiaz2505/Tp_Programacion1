@@ -8,9 +8,16 @@ int main()
     int legajo, turno, modalidad;
     float montoFinal;
     float arancel = 25000;
+    float recaudacionTotal = 0;
     bool hayError = false;
     bool deseaContinuar;
     char respuesta;
+    int cantInscripciones = 0;
+    int cantMañana = 0;
+    int cantTarde = 0;
+    int cantNoche = 0;
+    int cantPresencial = 0;
+    int cantVirtual = 1;
 
     do
     {
@@ -46,7 +53,19 @@ int main()
             switch (turno)
             {
             case 1: // Mañana
+
             case 2: // Tarde
+
+                if (turno == 1)
+                {
+                    cantMañana = cantMañana + 1;
+                }
+                else if (turno = 2)
+
+                {
+                    cantTarde = cantTarde + 1;
+                }
+
                 // modalidad
                 do
                 {
@@ -61,9 +80,11 @@ int main()
                 {
                 case 1: // Presencial
                     montoFinal = arancel * 1.10;
+                    cantPresencial = cantPresencial + 1;
                     break;
                 case 2: // Virtual
                     montoFinal = arancel * 1.05;
+                    cantVirtual = cantVirtual + 1;
                     break;
                 default:
                     printf("Modalidad invalida...\n");
@@ -76,6 +97,8 @@ int main()
                 modalidad = 1;
                 montoFinal = arancel * 1.10;
                 montoFinal = montoFinal * 0.92; // Descuento del 8%
+                cantNoche = cantNoche + 1;
+                cantPresencial = cantPresencial + 1;
                 break;
 
             default:
@@ -83,6 +106,8 @@ int main()
                 hayError = true;
                 break;
             }
+            cantInscripciones = cantInscripciones + 1;
+            recaudacionTotal = recaudacionTotal + montoFinal;
         }
 
         // Mostrar resumen si no hubo errores
@@ -109,6 +134,12 @@ int main()
             printf("Turno: %s\n", turnoStr);
             printf("Modalidad: %s\n", modalidadStr);
             printf("Monto total: $%.2f\n", montoFinal);
+            printf("Cantidad de inscripciones Totales: %d\n", cantInscripciones);
+            printf("La cantidad de alumnos en turno maniana: %d\n", cantMañana);
+            printf("La cantidad de alumnos en turno tarde: %d\n", cantTarde);
+            printf("La cantidad de alumnos en turno noche: %d\n", cantNoche);
+            printf("Cantidad que cursan presencial: %d\n", cantPresencial);
+            printf("Cantidad que cursan Virtual: %d\n", cantVirtual);
         }
 
         // se verifica si el usuario desea continuar
