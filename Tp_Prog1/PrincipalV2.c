@@ -133,13 +133,15 @@ int main()
             printf("Legajo: %d\n", legajo);
             printf("Turno: %s\n", turnoStr);
             printf("Modalidad: %s\n", modalidadStr);
-            printf("Monto total: $%.2f\n", montoFinal);
+            printf("Monto total de esta Inscripcion: $%.2f\n", montoFinal);
+            printf("Resumen de Operaciones: \n");
             printf("Cantidad de inscripciones Totales: %d\n", cantInscripciones);
             printf("La cantidad de alumnos en turno maniana: %d\n", cantMañana);
             printf("La cantidad de alumnos en turno tarde: %d\n", cantTarde);
             printf("La cantidad de alumnos en turno noche: %d\n", cantNoche);
             printf("Cantidad que cursan presencial: %d\n", cantPresencial);
             printf("Cantidad que cursan Virtual: %d\n", cantVirtual);
+            printf("Recaudacion total: $%.2f\n", recaudacionTotal);
         }
 
         // se verifica si el usuario desea continuar
