@@ -60,8 +60,7 @@ int main()
         case 3: // Noche
             modalidad = 1;
             montoFinal = arancel * 1.10;
-            montoFinal = montoFinal * 0.92; // Descuento del 8%
-            break;
+            montoFinal = montoFinal * 0.92;
 
         default:
             printf("Turno invalido.\n");
