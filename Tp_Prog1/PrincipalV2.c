@@ -40,20 +40,26 @@ int main()
         else
         {
             // Solicitar turno
-            do // este do soluciona la validacion (Ya no termina y se pierde la entrada anterior en caso de error)
+            do
             {
                 printf("Seleccione su turno: \n");
                 printf("1 - Maniana\n");
                 printf("2 - Tarde\n");
                 printf("3 - Noche\n");
+                fflush(stdin); // limpia Buffer para evitar bucles , fuente : https://youtu.be/AFcvGLEMgFU?si=l2phs4TQgl2WQ-Bq
                 scanf("%d", &turno);
+                fflush(stdin);
+                if (turno < 1 || turno > 3)
+                {
+                    printf("Opcion invalida , La opcion debe ser Numerica...\n");
+                }
 
             } while (turno < 1 || turno > 3);
 
             switch (turno)
             {
             case 1: // Mañana
-
+                    // y
             case 2: // Tarde
 
                 if (turno == 1)
@@ -72,8 +78,13 @@ int main()
                     printf("Seleccione la modalidad: \n");
                     printf("1 - Presencial\n");
                     printf("2 - Virtual\n");
-                    scanf("%d", &modalidad); // en este bloque o cerca se podria corregir al ingresar un char
-
+                    fflush(stdin);
+                    scanf("%d", &modalidad);
+                    fflush(stdin);
+                    if (modalidad < 1 || modalidad > 2)
+                    {
+                        printf("Opcion invalida , La opcion debe ser Numerica...\n");
+                    }
                 } while (modalidad < 1 || modalidad > 2);
 
                 switch (modalidad)
@@ -128,7 +139,7 @@ int main()
                 modalidadStr = "Presencial";
             else
                 modalidadStr = "Virtual";
-
+            // Resumen general de las inscripciones
             printf("\nRESUMEN DE INSCRIPCION\n");
             printf("Legajo: %d\n", legajo);
             printf("Turno: %s\n", turnoStr);
@@ -169,9 +180,8 @@ int main()
 
     if (deseaContinuar == false)
     {
-        printf("Hasta Pronto..."); // Mensaje de salida implementado
+        printf("Hasta Pronto..."); // Mensaje de salida
     }
 
     return 0;
-    //"Do's" implementados para mejorar las validaciones de menus switchs
 }
