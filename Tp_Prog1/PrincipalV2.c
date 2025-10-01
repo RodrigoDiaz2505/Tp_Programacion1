@@ -122,10 +122,10 @@ int main()
         }
 
         // Mostrar resumen si no hubo errores
-        if (!hayError)
+        if (hayError == false)
         {
             // Mostrar turno
-            char *turnoStr;
+            char *turnoStr; // Se utilizaron punteros . Fuente ; https://youtu.be/wqwgQZn1hco?si=7n6VfAGcAl161NdX
             if (turno == 1)
                 turnoStr = "Maniana";
             else if (turno == 2)
