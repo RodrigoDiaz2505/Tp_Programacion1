@@ -17,7 +17,7 @@ int main()
     int cantTarde = 0;
     int cantNoche = 0;
     int cantPresencial = 0;
-    int cantVirtual = 1;
+    int cantVirtual = 0;
 
     do
     {

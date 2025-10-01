@@ -1,1 +1,2 @@
-hayError = true;
+
+    char respuesta;
