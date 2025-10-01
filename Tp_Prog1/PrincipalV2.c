@@ -51,7 +51,7 @@ int main()
                 fflush(stdin);
                 if (turno < 1 || turno > 3)
                 {
-                    printf("Opcion invalida , La opcion debe ser Numerica...\n");
+                    printf("Opcion invalida , la opcion es un caracter o esta fuera de rango...\n");
                 }
 
             } while (turno < 1 || turno > 3);
@@ -83,7 +83,7 @@ int main()
                     fflush(stdin);
                     if (modalidad < 1 || modalidad > 2)
                     {
-                        printf("Opcion invalida , La opcion debe ser Numerica...\n");
+                        printf("Opcion invalida , la opcion es un caracter o esta fuera de rango...\n");
                     }
                 } while (modalidad < 1 || modalidad > 2);
 
